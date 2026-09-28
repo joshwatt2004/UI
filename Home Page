@@ -1,0 +1,132 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Main page */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+/* "The Wolfsonian" */
+h1 {
+    position: relative;
+    z-index: 2;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* FIU Logo */
+.fiu-logo {
+    position: relative;
+    z-index: 2;
+    margin-top: 8px;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 145px;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: 5px;
+
+    color: #002D62;
+
+    /* Gold outline */
+    -webkit-text-stroke: 5px #B6862C;
+
+    /* Makes the blue appear inside the gold border */
+    text-shadow:
+        3px 0 #002D62,
+        -3px 0 #002D62,
+        0 3px #002D62,
+        0 -3px #002D62;
+}
+
+/* Question */
+.question {
+    position: relative;
+    z-index: 2;
+    margin-top: 120px;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+/* Text box */
+input[type="text"] {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    width: 457px;
+    height: 51px;
+
+    margin: 12px auto 0;
+
+    padding: 8px 12px;
+
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+
+    background-color: #f4f4f4;
+    border: 2px solid #888;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #555;
+}
+
+/* Corner circles */
+.circle {
+    position: absolute;
+    width: 285px;
+    height: 285px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Navy circles */
+.navy {
+    background-color: #003B67;
+}
+
+/* Gold circles */
+.gold {
+    background-color: #967000;
+}
+
+/* Top-left */
+.top-left {
+    top: -30px;
+    left: -70px;
+}
+
+/* Top-right */
+.top-right {
+    top: -30px;
+    right: -70px;
+}
+
+/* Bottom-left */
+.bottom-left {
+    bottom: -45px;
+    left: -70px;
+}
+
+/* Bottom-right */
+.bottom-right {
+    bottom: -45px;
+    right: -70px;
+}
