@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: white;
+            background-color: #faf9f6;
         }
 
         .page {
@@ -22,11 +23,31 @@
         .map-container {
             position: relative;
             width: 55%;
+            padding: 12px;
+            background-color: #ffffff;
+            border: 1px solid #e4e9f0;
+            border-radius: 26px;
+            box-shadow: 0 12px 34px rgba(20, 41, 77, 0.10);
+            box-sizing: border-box;
         }
 
         .map {
             width: 100%;
             display: block;
+            border-radius: 18px;
+        }
+
+        /* GOLD ACCENT ON MAP */
+        .map-container::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 6px;
+            height: 55px;
+            background-color: #f3b73b;
+            border-radius: 0 0 5px 0;
+            z-index: 1;
         }
 
         /* RIGHT SIDE */
@@ -36,31 +57,49 @@
         }
 
         .controls h1 {
+            font-family: Georgia, serif;
+            color: #1b3a6b;
             font-size: 55px;
             font-weight: normal;
+            line-height: 1.1;
             margin-bottom: 70px;
         }
 
-        /* Gray buttons */
+        /* GRAY BUTTONS */
         .location-button {
             display: block;
             width: 100%;
-            height: 85px;
+            min-height: 85px;
             margin-bottom: 20px;
+            padding: 15px;
 
-            background-color: #eeeeee;
-            border: 1px solid #666;
+            background-color: #ffffff;
+            color: #1b3a6b;
+            border: 1px solid #e4e9f0;
+            border-left: 5px solid #f3b73b;
             border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(20, 41, 77, 0.08);
 
-            font-size: 24px;
+            font-size: 22px;
+            font-family: Arial, sans-serif;
             cursor: pointer;
+
+            transition: background-color 0.2s ease,
+                        transform 0.2s ease,
+                        box-shadow 0.2s ease;
         }
 
         .location-button:hover {
-            background-color: #dddddd;
+            background-color: #eaf2fb;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(47, 111, 179, 0.15);
         }
 
-        /* Yellow ping */
+        .location-button:active {
+            transform: translateY(0);
+        }
+
+        /* YELLOW PING - FUNCTIONALITY UNCHANGED */
         .ping {
             position: absolute;
 
@@ -94,6 +133,33 @@
                 box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
             }
         }
+
+        /* RESPONSIVE LAYOUT */
+        @media (max-width: 800px) {
+            .page {
+                flex-direction: column;
+                gap: 35px;
+                width: 92%;
+            }
+
+            .map-container {
+                width: 100%;
+            }
+
+            .controls {
+                width: 100%;
+            }
+
+            .controls h1 {
+                font-size: 42px;
+                margin-bottom: 30px;
+            }
+
+            .location-button {
+                min-height: 70px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
@@ -114,7 +180,6 @@
             <div id="ping" class="ping"></div>
 
         </div>
-
 
         <!-- BUTTONS -->
         <div class="controls">
@@ -145,7 +210,6 @@
         </div>
 
     </div>
-
 
     <script>
 
@@ -190,3 +254,4 @@
 
 </body>
 </html>
+```
